@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div>
+                <div class="query">
+                    <strong>query</strong> getUser <span><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="stats">
+                    <span style="font-weight: 600;">7.15M</span> Requests <span>•</span><span style="font-weight: 600;">9%</span>  <span>•<span style="font-weight: 600;">734ms P95</span> 
+                </div>
+            </div>
+            <button class="more-options">•••</button>
+        </div>
+
+        <div class="metrics">
+            <div class="metric-box">
+                <div class="metric-title">Cache Hit Rate</div>
+              
+                <div class="metric-value">
+                    <div class="spinner">
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                        <div class="segment"></div>
+                    </div>12.3%</div>
+                <div class="trend" style="color: #f77552; font-weight: 500;">↓ down from 19.6%</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-title">Max CHR</div>
+                <div class="metric-value" style="color: #69788b;">72.6%</div>
+                <div class="trend positive" style="font-weight: 500; display: flex;">CHR Impact +5.4% 
+                    <div class="tooltip">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line" style="width: 100%; height: 1px; background-color: #e9ecee;">
+
+        </div>
+
+        <div class="bandwidth">
+            <div class="bandwidth-header">
+                <div>
+                    <div class="bandwidth-title" style="font-weight: 500;">90.5 GB <span style="color: #666; font-size: 18px;">(69.8%)</span></div>
+                    <div class="bandwidth-subtitle" style="font-weight: 400;">Cacheable Bandwidth</div>
+                </div>
+                <div class="price" style="display: flex;">$9.50
+                    <div class="tooltip">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-filled"></div>
+            </div>
+
+            <div class="bandwidth-details">
+                <p><span class="dot purple"></span>Cached <Span style="font-weight: 500; color: black;">12.8 GB</Span> (9.8%)</p>
+                <p><span class="dot dark"></span>Non-Cacheable <span style="font-weight: 500; color: black;">26.3 GB</span> (20.3%)</p>
+                <p style="margin-top: 8px;">Total <span style="font-weight: 500; color: black;">129.6 GB</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
