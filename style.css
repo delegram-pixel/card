@@ -66,12 +66,14 @@ body {
 
 .metric-box {
     
+
 }
 
 .metric-title {
     color: #666;
     font-size: 16px;
     margin-bottom: 8px;
+    
 }
 
 .metric-value {
@@ -189,49 +191,32 @@ body {
     border: none;
     cursor: pointer;
 }
-.spinner {
+
+.progress-ring {
     width: 40px;
     height: 40px;
     position: relative;
-    animation: rotate 1.5s linear infinite;
+    /* margin: 100px auto; */
+    margin:5px
 }
 
-.segment {
-    width: 8%;
-    height: 24%;
-    background: #f5572b;
-    position: absolute;
-    left: 46%;
-    top: 38%;
-    opacity: 0;
-    border-radius: 50px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    animation: fade 1s linear infinite;
+.progress-ring__circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
 }
 
-/* Position each segment */
-.segment:nth-child(1) { transform: rotate(0deg) translate(0, -120%); animation-delay: 0s; }
-.segment:nth-child(2) { transform: rotate(30deg) translate(0, -120%); animation-delay: -0.0833s; }
-.segment:nth-child(3) { transform: rotate(60deg) translate(0, -120%); animation-delay: -0.1666s; }
-.segment:nth-child(4) { transform: rotate(90deg) translate(0, -120%); animation-delay: -0.25s; }
-.segment:nth-child(5) { transform: rotate(120deg) translate(0, -120%); animation-delay: -0.3333s; }
-.segment:nth-child(6) { transform: rotate(150deg) translate(0, -120%); animation-delay: -0.4166s; }
-.segment:nth-child(7) { transform: rotate(180deg) translate(0, -120%); animation-delay: -0.5s; }
-.segment:nth-child(8) { transform: rotate(210deg) translate(0, -120%); animation-delay: -0.5833s; }
-.segment:nth-child(9) { transform: rotate(240deg) translate(0, -120%); animation-delay: -0.6666s; }
-.segment:nth-child(10) { transform: rotate(270deg) translate(0, -120%); animation-delay: -0.75s; }
-.segment:nth-child(11) { transform: rotate(300deg) translate(0, -120%); animation-delay: -0.8333s; }
-.segment:nth-child(12) { transform: rotate(330deg) translate(0, -120%); animation-delay: -0.9166s; }
-
-/* Segment fade animation */
-@keyframes fade {
-    0%, 100% { opacity: 0.15; }
-    25% { opacity: 1; }
-    50% { opacity: 0.15; }
+.progress-ring__circle--bg {
+    stroke: #e4e4e7;
 }
 
-/* Spinner rotation animation */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.progress-ring__circle--progress {
+    stroke: #f97316;
+    stroke-dasharray: 100.53; /* Circumference of circle (2 * π * r) */
+    stroke-dashoffset: 75.4; /* Adjust this value to show different progress (75% shown) */
+    transition: stroke-dashoffset 0.3s ease;
 }
